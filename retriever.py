@@ -1,4 +1,4 @@
-from embed_faq import MODEL_NAME, INDEX, QUESTIONS
+from embedder import MODEL_NAME, INDEX, QUESTIONS
 from sentence_transformers import SentenceTransformer
 import faiss
 import numpy as np
@@ -12,7 +12,7 @@ FAQ_ENTRIES = [
 ]
 
 
-class FAQRetriever:
+class Retriever:
     """
     A retrieval-augmented class for matching user queries to a set of predefined FAQ entries
     using dense semantic search with FAISS and a SentenceTransformer model.
@@ -55,7 +55,7 @@ class FAQRetriever:
 
 
 # if __name__ == "__main__":
-#     retriever = FAQRetriever(
+#     retriever = Retriever(
 #         model_name=MODEL_NAME,
 #         index_path=INDEX,
 #         questions_path=QUESTIONS,
