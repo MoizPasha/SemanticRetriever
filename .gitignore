@@ -1,0 +1,6 @@
+# Byte-compiled files
+*.pyc
+
+# Index files
+*.npy
+*.index
